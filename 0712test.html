@@ -2,7 +2,17 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>11周年記念合同</title>
+<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0">
+<meta name="keywords" content="古明地さとり11周年合同誌,古明地さとり,東方地霊殿,Subterranean Aminism,東方Project,同人誌,合同誌" />
+<meta name="description" content="説明テキスト" />
+<meta property="og:url" content="https://rapameri.github.io/11/" />
+<meta property="og:title" content="古明地さとり11周年合同誌" />
+<meta property="og:description" content="説明テキスト" />
+<meta property="og:image" content="https://rapameri.github.io/11/img/og.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creater" content="@rapameri" />
+<meta name="twitter:site" content="@rapameri" />
+<title>古明地さとり11周年合同誌</title>
 <link rel="stylesheet" href="test.css">
 <script src="test.js"></script>
 </head>
@@ -19,13 +29,17 @@
 <!-- ^^^^^^^^^^ -->
 
 <main>
-  <section class="screen" id="intro" style="background-image:url('img/header.jpg');">
-    <p class="satori">あなたが思い浮かべている数字は……</p>
-    <p class="satori">ズバリ！ 「<span class="eleven">11</span>」ですね？</p>
-    <p class="satori">このくだりはもうやりましたね</p>
+  <section class="screen inmind" id="intro">
+    <div class="fukidashi introhidden">あなたが思い浮かべている数字は.</div>
+    <div class="fukidashi introhidden">ズバリ！ 「<span class="eleven">11</span>」ですね？<br><div class="intro-ok" onclick="scrll(1)">あたり！</div><div class="intro-ng" onclick="scrll(0)">はずれ…</div></div>
+    <div class="scrollmark introhidden">▼</div>
   </section>
   <section class="screen" id="lead">
-    いい感じのリード文的な煽り
+    <div>
+      <img src="img/logo.png" alt="古明地さとり11周年合同誌" style="width:256px;">
+      <p>なんかいい感じの煽り文</p>
+    </div>
+    <div class="scrollmark">▼</div>
   </section>
   <section class="screen" id="sample">
     <ul class="sample-wall">
@@ -43,13 +57,12 @@
 <li class="sample-tile"><div class="member-sample" style="background-image:url('img/kari.png');" onclick="sample(8)"></div><div class="member-name">雁</div><div class="member-twipix"><a href="https://twitter.com/kariore" target="_blank" title="twitter.com/kariore"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=87692" target="_blank" title="www.pixiv.net/member.php?id=87692"><img src="pixiv.png" alt="pixiv"></a></div></li>
 <li class="sample-tile"><div class="member-sample" style="background-image:url('img/ominaeshi.png');" onclick="sample(9)"></div><div class="member-name">おみなえし</div><div class="member-twipix"><a href="https://twitter.com/ominaeshin" target="_blank" title="twitter.com/ominaeshin"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=446171" target="_blank" title="www.pixiv.net/member.php?id=446171"><img src="pixiv.png" alt="pixiv"></a></div></li>
 <li class="sample-tile"><div class="member-sample" style="background-image:url('img/akira.png');" onclick="sample(10)"></div><div class="member-name">暁【あきら】</div><div class="member-twipix"><a href="https://twitter.com/salmontiger" target="_blank" title="twitter.com/salmontiger"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=281080" target="_blank" title="www.pixiv.net/member.php?id=281080"><img src="pixiv.png" alt="pixiv"></a></div></li>
-
     </ul>
   </section>
   <section class="screen" id="info">
     <!-- h1><span class="eleven">11</span>周年記念合同</h1 -->
-    <img src="img/hyoushi.png" alt="古明地さとり11周年合同誌" onclick="sample(11)">
-    <dl>
+    <img src="img/sample11.png" alt="古明地さとり11周年合同誌" class="info-hyoushi" onclick="sample(11)">
+    <dl class="info-dl">
       <dt>タイトル</dt>
       <dd>古明地さとり<span class="eleven">11</span>周年合同誌</dd>
       <dt>仕様</dt>
@@ -64,6 +77,9 @@
       <dt>書店委託</dt>
       <dd>メロンブックス様予定</dd>
     </dl>
+  </section>
+  <section class="" id="share">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="古明地さとり" data-url="https://rapameri.github.io/11/" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </section>
 </main>
 <footer class="">
