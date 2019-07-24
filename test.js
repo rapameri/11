@@ -1,4 +1,4 @@
-﻿//window.alert('数字を一つ思い浮かべてください');
+window.alert('数字を一つ思い浮かべてください');
 document.addEventListener('DOMContentLoaded',function(){
   window.addEventListener('scroll',function(){
     const scrollElem = document.scrollingElement || document.documentElement || document.body;
