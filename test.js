@@ -1,4 +1,4 @@
-﻿//window.alert('数字を一つ思い浮かべてください');
+window.alert('数字を一つ思い浮かべてください');
 function wait(msec){
   return new Promise(resolve=>{
     setTimeout(()=>{resolve()},msec);
