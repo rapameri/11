@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>11周年記念合同</title>
+<link rel="stylesheet" href="test.css">
+<script src="test.js"></script>
+</head>
+<body>
+
+<!-- vvvvvvvvvv -->
+<div id="mediascreen" onclick="closesample()">
+  <div id="mediastage" onclick="event.stopPropagation();">
+    <img id="media-main" alt="sample"><br>
+    <div id="media-caption"></div>
+  </div>
+  <div id="close">×</div>
+</div>
+<!-- ^^^^^^^^^^ -->
+
+<main>
+  <section class="screen" id="intro" style="background-image:url('img/header.jpg');">
+    <p class="satori">あなたが思い浮かべている数字は……</p>
+    <p class="satori">ズバリ！ 「<span class="eleven">11</span>」ですね？</p>
+    <p class="satori">このくだりはもうやりましたね</p>
+  </section>
+  <section class="screen" id="lead">
+    いい感じのリード文的な煽り
+  </section>
+  <section class="screen" id="sample">
+    <ul class="sample-wall">
+      <li class="sample-tile sample-header" style="background-image:url('sample.png');background-size:100% 100%;">
+        <h2 class="sample-h">Member<br>&amp;<br>Sample</h2>
+      </li>
+<li class="sample-tile"><div class="member-sample" style="background-image:url('img/rapameri.png');" onclick="sample(0)"></div><div class="member-name">ラパメリ</div><div class="member-twipix"><a href="https://twitter.com/rapameri" target="_blank" title="twitter.com/rapameri"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=11714075" target="_blank" title="www.pixiv.net/member.php?id=11714075"><img src="pixiv.png" alt="pixiv"></a></div></li>
+<li class="sample-tile"><div class="member-sample" style="background-image:url('img/menotama.png');" onclick="sample(1)"></div><div class="member-name">めのたま</div><div class="member-twipix"><a href="https://twitter.com/nnonnonno_2" target="_blank" title="twitter.com/nnonnonno_2"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=18433772" target="_blank" title="www.pixiv.net/member.php?id=18433772"><img src="pixiv.png" alt="pixiv"></a></div></li>
+<li class="sample-tile"><div class="member-sample" style="background-image:url('img/tora.png');" onclick="sample(2)"></div><div class="member-name">虎</div><div class="member-twipix"><a href="https://twitter.com/citrus_bw" target="_blank" title="twitter.com/citrus_bw"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=117211" target="_blank" title="www.pixiv.net/member.php?id=117211"><img src="pixiv.png" alt="pixiv"></a></div></li>
+<li class="sample-tile"><div class="member-sample" style="background-image:url('img/toden.png');" onclick="sample(3)"></div><div class="member-name">斗伝</div><div class="member-twipix"><a href="https://twitter.com/EYE_SPLICE" target="_blank" title="twitter.com/EYE_SPLICE"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=5143978" target="_blank" title="www.pixiv.net/member.php?id=5143978"><img src="pixiv.png" alt="pixiv"></a></div></li>
+<li class="sample-tile"><div class="member-sample" style="background-image:url('img/twumi.png');" onclick="sample(4)"></div><div class="member-name">トゥーミ</div><div class="member-twipix"><a href="https://twitter.com/twumi425" target="_blank" title="twitter.com/twumi425"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=1875134" target="_blank" title="www.pixiv.net/member.php?id=1875134"><img src="pixiv.png" alt="pixiv"></a></div></li>
+<li class="sample-tile"><div class="member-sample" style="background-image:url('img/chanomino.png');" onclick="sample(5)"></div><div class="member-name">茶野みの</div><div class="member-twipix"><a href="https://twitter.com/minorin_minor" target="_blank" title="twitter.com/minorin_minor"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=11108076" target="_blank" title="www.pixiv.net/member.php?id=11108076"><img src="pixiv.png" alt="pixiv"></a></div></li>
+<li class="sample-tile"><div class="member-sample" style="background-image:url('img/suwayasai.png');" onclick="sample(6)"></div><div class="member-name">諏訪ヤサイ</div><div class="member-twipix"><a href="https://twitter.com/yasai_023" target="_blank" title="twitter.com/yasai_023"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=13477002" target="_blank" title="www.pixiv.net/member.php?id=13477002"><img src="pixiv.png" alt="pixiv"></a></div></li>
+<li class="sample-tile"><div class="member-sample" style="background-image:url('img/komeo.png');" onclick="sample(7)"></div><div class="member-name">こめお</div><div class="member-twipix"><a href="https://twitter.com/tukinomisheru" target="_blank" title="twitter.com/tukinomisheru"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=450512" target="_blank" title="www.pixiv.net/member.php?id=450512"><img src="pixiv.png" alt="pixiv"></a></div></li>
+<li class="sample-tile"><div class="member-sample" style="background-image:url('img/kari.png');" onclick="sample(8)"></div><div class="member-name">雁</div><div class="member-twipix"><a href="https://twitter.com/kariore" target="_blank" title="twitter.com/kariore"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=87692" target="_blank" title="www.pixiv.net/member.php?id=87692"><img src="pixiv.png" alt="pixiv"></a></div></li>
+<li class="sample-tile"><div class="member-sample" style="background-image:url('img/ominaeshi.png');" onclick="sample(9)"></div><div class="member-name">おみなえし</div><div class="member-twipix"><a href="https://twitter.com/ominaeshin" target="_blank" title="twitter.com/ominaeshin"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=446171" target="_blank" title="www.pixiv.net/member.php?id=446171"><img src="pixiv.png" alt="pixiv"></a></div></li>
+<li class="sample-tile"><div class="member-sample" style="background-image:url('img/akira.png');" onclick="sample(10)"></div><div class="member-name">暁【あきら】</div><div class="member-twipix"><a href="https://twitter.com/salmontiger" target="_blank" title="twitter.com/salmontiger"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=281080" target="_blank" title="www.pixiv.net/member.php?id=281080"><img src="pixiv.png" alt="pixiv"></a></div></li>
+
+    </ul>
+  </section>
+  <section class="screen" id="info">
+    <!-- h1><span class="eleven">11</span>周年記念合同</h1 -->
+    <img src="img/hyoushi.png" alt="古明地さとり11周年合同誌" onclick="sample(11)">
+    <dl>
+      <dt>タイトル</dt>
+      <dd>古明地さとり<span class="eleven">11</span>周年合同誌</dd>
+      <dt>仕様</dt>
+      <dd>B5判モノクロ漫画56ページ</dd>
+      <dt>頒布イベント</dt>
+      <dd>2019年8月12日（月）<br>
+      コミックマーケット96 4日目<br>
+      南4ホール ハ-25b「ラパパメリカ」
+      </dd>
+      <dt>頒布価格</dt>
+      <dd>NaN円</dd>
+      <dt>書店委託</dt>
+      <dd>メロンブックス様予定</dd>
+    </dl>
+  </section>
+</main>
+<footer class="">
+  &copy;2019 ラパパメリカ
+</footer>
+</body>
+</html>
