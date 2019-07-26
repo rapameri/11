@@ -13,16 +13,16 @@
 <meta name="twitter:creater" content="@rapameri" />
 <meta name="twitter:site" content="@rapameri" />
 <title>古明地さとり11周年合同誌</title>
-<link rel="stylesheet" href="test.css?v=1">
-<script src="test.js?v=1"></script>
+<link rel="stylesheet" href="test.css?v=2">
+<script src="test.js?v=2"></script>
 </head>
 <body>
 
 <!-- vvvvvvvvvv -->
 <div id="mediascreen" onclick="closesample()">
-  <div id="mediastage" onclick="event.stopPropagation();">
+  <div id="mediastage" onclick="">
     <img id="media-main" alt="sample"><br>
-    <div id="media-caption"></div>
+    <div id="media-caption">/*event.stopPropagation();*/</div>
   </div>
   <div id="close">×</div>
 </div>
@@ -30,33 +30,85 @@
 
 <main>
   <section class="screen inmind" id="intro">
-    <div class="fukidashi introhidden">あなたが思い浮かべている数字は.</div>
-    <div class="fukidashi introhidden">ズバリ！ 「<span class="eleven">11</span>」ですね？<br><div class="intro-ok" onclick="scrll(1)">あたり！</div><div class="intro-ng" onclick="scrll(0)">はずれ…</div></div>
-    <div class="scrollmark introhidden">▼</div>
+    <div class="introparts fukidashi introhidden" data-id="0" data-next="1" data-function="dots">あなたが思い浮かべている数字は</div>
+    <div class="introparts fukidashi introhidden" data-id="1" data-next="">ズバリ！ 「<span class="eleven-wh">11</span>」ですね？<br>
+      <a href="https://twitter.com/intent/tweet?text=想像していた数字を古明地さとりが当てた&url=https%3A%2F%2Frapameri.github.io%2F11%2F" class="intro-success" onclick="innext('.success')">あたり！</a>
+      <a href="https://twitter.com/intent/tweet?text=古明地さとりはあなたの心を読めなかった&url=https%3A%2F%2Frapameri.github.io%2F11%2F" class="intro-failure" onclick="innext('.failure')">はずれ…</a>
+    </div>
+    <div class="introparts fukidashi introhidden">
+      <p class="success introhidden">どうです？心を読む能力は本当に素晴らしいでしょう？</p>
+      <p class="failure introhidden">…流石にインターネット越しでは心は読めないわ</p>
+      <div class="intro-retry" onclick="introgame()">もう一度遊ぶ</div>
+    </div>
+    <div class="introparts scrollmark introhidden" id="scrollmark">▼</div>
   </section>
   <section class="screen" id="lead">
     <div>
       <img src="img/logo.png" alt="古明地さとり11周年合同誌" style="width:256px;">
-      <p>なんかいい感じの煽り文</p>
+      <p>東方地霊殿の<span class="eleven-wh">11</span>周年をお祝いしに<span class="eleven-wh">11</span>人のメンバーが結集！</p>
+      <p>十人十色もとい<span class="eleven-wh">十一</span>人<span class="eleven-wh">十一</span>色の魅力的なさとり様をご覧あれ！</p>
     </div>
-    <div class="scrollmark">▼</div>
   </section>
   <section class="screen" id="sample">
     <ul class="sample-wall">
       <li class="sample-tile sample-header" style="background-image:url('sample.png');background-size:100% 100%;">
         <h2 class="sample-h">Member<br>&amp;<br>Sample</h2>
       </li>
-<li class="sample-tile"><div class="member-sample" style="background-image:url('img/rapameri.png');" onclick="sample(0)"></div><div class="member-name">ラパメリ</div><div class="member-twipix"><a href="https://twitter.com/rapameri" target="_blank" title="twitter.com/rapameri"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=11714075" target="_blank" title="www.pixiv.net/member.php?id=11714075"><img src="pixiv.png" alt="pixiv"></a></div></li>
-<li class="sample-tile"><div class="member-sample" style="background-image:url('img/menotama.png');" onclick="sample(1)"></div><div class="member-name">めのたま</div><div class="member-twipix"><a href="https://twitter.com/nnonnonno_2" target="_blank" title="twitter.com/nnonnonno_2"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=18433772" target="_blank" title="www.pixiv.net/member.php?id=18433772"><img src="pixiv.png" alt="pixiv"></a></div></li>
-<li class="sample-tile"><div class="member-sample" style="background-image:url('img/tora.png');" onclick="sample(2)"></div><div class="member-name">虎</div><div class="member-twipix"><a href="https://twitter.com/citrus_bw" target="_blank" title="twitter.com/citrus_bw"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=117211" target="_blank" title="www.pixiv.net/member.php?id=117211"><img src="pixiv.png" alt="pixiv"></a></div></li>
-<li class="sample-tile"><div class="member-sample" style="background-image:url('img/toden.png');" onclick="sample(3)"></div><div class="member-name">斗伝</div><div class="member-twipix"><a href="https://twitter.com/EYE_SPLICE" target="_blank" title="twitter.com/EYE_SPLICE"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=5143978" target="_blank" title="www.pixiv.net/member.php?id=5143978"><img src="pixiv.png" alt="pixiv"></a></div></li>
-<li class="sample-tile"><div class="member-sample" style="background-image:url('img/twumi.png');" onclick="sample(4)"></div><div class="member-name">トゥーミ</div><div class="member-twipix"><a href="https://twitter.com/twumi425" target="_blank" title="twitter.com/twumi425"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=1875134" target="_blank" title="www.pixiv.net/member.php?id=1875134"><img src="pixiv.png" alt="pixiv"></a></div></li>
-<li class="sample-tile"><div class="member-sample" style="background-image:url('img/chanomino.png');" onclick="sample(5)"></div><div class="member-name">茶野みの</div><div class="member-twipix"><a href="https://twitter.com/minorin_minor" target="_blank" title="twitter.com/minorin_minor"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=11108076" target="_blank" title="www.pixiv.net/member.php?id=11108076"><img src="pixiv.png" alt="pixiv"></a></div></li>
-<li class="sample-tile"><div class="member-sample" style="background-image:url('img/suwayasai.png');" onclick="sample(6)"></div><div class="member-name">諏訪ヤサイ</div><div class="member-twipix"><a href="https://twitter.com/yasai_023" target="_blank" title="twitter.com/yasai_023"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=13477002" target="_blank" title="www.pixiv.net/member.php?id=13477002"><img src="pixiv.png" alt="pixiv"></a></div></li>
-<li class="sample-tile"><div class="member-sample" style="background-image:url('img/komeo.png');" onclick="sample(7)"></div><div class="member-name">こめお</div><div class="member-twipix"><a href="https://twitter.com/tukinomisheru" target="_blank" title="twitter.com/tukinomisheru"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=450512" target="_blank" title="www.pixiv.net/member.php?id=450512"><img src="pixiv.png" alt="pixiv"></a></div></li>
-<li class="sample-tile"><div class="member-sample" style="background-image:url('img/kari.png');" onclick="sample(8)"></div><div class="member-name">雁</div><div class="member-twipix"><a href="https://twitter.com/kariore" target="_blank" title="twitter.com/kariore"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=87692" target="_blank" title="www.pixiv.net/member.php?id=87692"><img src="pixiv.png" alt="pixiv"></a></div></li>
-<li class="sample-tile"><div class="member-sample" style="background-image:url('img/ominaeshi.png');" onclick="sample(9)"></div><div class="member-name">おみなえし</div><div class="member-twipix"><a href="https://twitter.com/ominaeshin" target="_blank" title="twitter.com/ominaeshin"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=446171" target="_blank" title="www.pixiv.net/member.php?id=446171"><img src="pixiv.png" alt="pixiv"></a></div></li>
-<li class="sample-tile"><div class="member-sample" style="background-image:url('img/akira.png');" onclick="sample(10)"></div><div class="member-name">暁【あきら】</div><div class="member-twipix"><a href="https://twitter.com/salmontiger" target="_blank" title="twitter.com/salmontiger"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=281080" target="_blank" title="www.pixiv.net/member.php?id=281080"><img src="pixiv.png" alt="pixiv"></a></div></li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/rapameri.png');" onclick="sample(0)"></div>
+      <div class="member-name" onclick="sample(0)">ラパメリ</div>
+      <div class="member-twipix"><a href="https://twitter.com/rapameri" target="_blank" title="twitter.com/rapameri"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=11714075" target="_blank" title="www.pixiv.net/member.php?id=11714075"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/menotama.png');" onclick="sample(1)"></div>
+      <div class="member-name" onclick="sample(1)">めのたま</div>
+      <div class="member-twipix"><a href="https://twitter.com/nnonnonno_2" target="_blank" title="twitter.com/nnonnonno_2"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=18433772" target="_blank" title="www.pixiv.net/member.php?id=18433772"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/tora.png');" onclick="sample(2)"></div>
+      <div class="member-name" onclick="sample(2)">虎</div>
+      <div class="member-twipix"><a href="https://twitter.com/citrus_bw" target="_blank" title="twitter.com/citrus_bw"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=117211" target="_blank" title="www.pixiv.net/member.php?id=117211"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/toden.png');" onclick="sample(3)"></div>
+      <div class="member-name" onclick="sample(3)">斗伝</div>
+      <div class="member-twipix"><a href="https://twitter.com/EYE_SPLICE" target="_blank" title="twitter.com/EYE_SPLICE"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=5143978" target="_blank" title="www.pixiv.net/member.php?id=5143978"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/twumi.png');" onclick="sample(4)"></div>
+      <div class="member-name" onclick="sample(4)">トゥーミ</div>
+      <div class="member-twipix"><a href="https://twitter.com/twumi425" target="_blank" title="twitter.com/twumi425"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=1875134" target="_blank" title="www.pixiv.net/member.php?id=1875134"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/chanomino.png');" onclick="sample(5)"></div>
+      <div class="member-name" onclick="sample(5)">茶野みの</div>
+      <div class="member-twipix"><a href="https://twitter.com/minorin_minor" target="_blank" title="twitter.com/minorin_minor"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=11108076" target="_blank" title="www.pixiv.net/member.php?id=11108076"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/suwayasai.png');" onclick="sample(6)"></div>
+      <div class="member-name" onclick="sample(6)">諏訪ヤサイ</div>
+      <div class="member-twipix"><a href="https://twitter.com/yasai_023" target="_blank" title="twitter.com/yasai_023"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=13477002" target="_blank" title="www.pixiv.net/member.php?id=13477002"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/komeo.png');" onclick="sample(7)"></div>
+      <div class="member-name" onclick="sample(7)">こめお</div>
+      <div class="member-twipix"><a href="https://twitter.com/tukinomisheru" target="_blank" title="twitter.com/tukinomisheru"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=450512" target="_blank" title="www.pixiv.net/member.php?id=450512"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/kari.png');" onclick="sample(8)"></div>
+      <div class="member-name" onclick="sample(8)">雁</div>
+      <div class="member-twipix"><a href="https://twitter.com/kariore" target="_blank" title="twitter.com/kariore"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=87692" target="_blank" title="www.pixiv.net/member.php?id=87692"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/ominaeshi.png');" onclick="sample(9)"></div>
+      <div class="member-name" onclick="sample(9)">おみなえし</div>
+      <div class="member-twipix"><a href="https://twitter.com/ominaeshin" target="_blank" title="twitter.com/ominaeshin"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=446171" target="_blank" title="www.pixiv.net/member.php?id=446171"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/akira.png');" onclick="sample(10)"></div>
+      <div class="member-name" onclick="sample(10)">暁【あきら】</div>
+      <div class="member-twipix"><a href="https://twitter.com/salmontiger" target="_blank" title="twitter.com/salmontiger"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=281080" target="_blank" title="www.pixiv.net/member.php?id=281080"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
     </ul>
   </section>
   <section class="screen" id="info">
@@ -76,14 +128,25 @@
       <dd>NaN円</dd>
       <dt>書店委託</dt>
       <dd>メロンブックス様予定</dd>
+      <dt>シェア</dt>
+      <dd><a href="https://twitter.com/share" class="twitter-share-button" data-text="古明地さとり11周年合同誌" data-url="https://rapameri.github.io/11/" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></dd>
     </dl>
   </section>
-  <section class="" id="share">
-    <a href="https://twitter.com/share" class="twitter-share-button" data-text="古明地さとり" data-url="https://rapameri.github.io/11/" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </section>
 </main>
-<footer class="">
-  &copy;2019 ラパパメリカ
+<footer class="screen">
+  <div>
+    <dl class="staff-dl">
+      <dt>主催</dt>
+      <dd>ラパメリ</dd>
+      <dt>副主催・サイト制作</dt>
+      <dd>茶野みの</dd>
+    </dl>
+    <div class="introhidden rebuke" id="rebuke">
+      <div class="fukidashi-ue">ゲームの途中でどっか行かないでください！</div>
+      <img class="rebuke-img" src="https://rapameri.github.io/img/acryl/20170811satori.png" alt="古明地さとり">
+    </div>
+    <p><small>&copy;2019 ラパパメリカ</small></p>
+  </div>
 </footer>
 </body>
 </html>
