@@ -2,9 +2,668 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>11</title>
+<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0">
+<meta name="keywords" content="古明地さとり11周年合同誌,古明地さとり,東方地霊殿,Subterranean Aminism,東方Project,同人誌,合同誌">
+<meta name="description" content="東方地霊殿11周年記念！古明地さとりの魅力を11人が描く合同誌">
+<meta property="og:url" content="https://rapameri.github.io/11/">
+<meta property="og:title" content="古明地さとり11周年合同誌">
+<meta property="og:description" content="東方地霊殿11周年記念！古明地さとりの魅力を11人が描く合同誌">
+<meta property="og:image" content="https://rapameri.github.io/11/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creater" content="@rapameri">
+<meta name="twitter:site" content="@rapameri">
+<title>古明地さとり11周年合同誌</title>
+<style>
+body{
+  font-family:serif;
+  position:relative;
+  margin:0;
+  width:100%;
+  height:100%;
+  background:#ffdef1;
+}
+.screen{
+  position:relative;
+  width:100%;
+  height:auto;
+  min-height:100vh;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  background-size:cover;
+}
+#intro{
+  height:100vh;
+  background-image:url('img/header.jpg');
+}
+#sample{
+  background:#d0b380;
+}
+#lead{
+  background:black;
+  color:white;
+  text-align:center;
+}
+#info{
+  background:white;
+}
+#share{
+  padding:111px 0;
+  background:white;
+  text-align:center;
+}
+footer{
+  text-align:center;
+}
+span.eleven{ color:#ba105e; font-size:larger; font-weight:bold;}
+span.eleven-wh{ color:#fa308e; font-size:larger; font-weight:bold;}
+span.nobr{ white-space:nowrap; }
+
+.introhidden{ display:none; opacity:0; }
+.inmind{ opacity:0; transition:opacity 500ms ease; }
+.outspeak{ opacity:1; transition:opacity 500ms ease; }
+.scrollmark{
+  position:absolute;
+  top:85%;
+  color:white;
+  font-size:xx-large;
+  font-weight:bold;
+  text-shadow:2px 2px 8px black, 2px -2px 8px black, -2px -2px 8px black, -2px 2px 8px black;
+  animation:scrollrequest 1s infinite linear;
+}
+@keyframes scrollrequest{
+  0%{ opacity:0; transform:translateY(-70%); }
+  40%{ opacity:1; transform:translateY(0%); }
+  80%{ opacity:0; transform:translateY(50%); }
+  100%{ opacity:0; transform:translateY(70%); }
+}
+.fukidashi,.fukidashi-ue{
+  position:relative;
+  padding:1em;
+  border:2px solid #ba105e;
+  background:white;
+}
+.fukidashi:before,.fukidashi:after,.fukidashi-ue:before,.fukidashi-ue:after{
+  content:"";
+  position:absolute;
+  border:12px solid transparent;
+}
+@media (orientation:landscape){
+  .fukidashi{
+    left:25%;
+  }
+  .fukidashi:before{
+    left:-26px;
+    bottom:calc(50% - 12px);
+    border-right:12px solid #ba105e;
+  }
+  .fukidashi:after{
+    left:-24px;
+    bottom:calc(50% - 12px);
+    border-right:12px solid white;
+  }
+}
+@media (orientation:portrait){
+  .fukidashi{
+    top:25%;
+  }
+  .fukidashi:before{
+    left:calc(50% - 12px);
+    top:-26px;
+    border-bottom:12px solid #ba105e;
+  }
+  .fukidashi:after{
+    left:calc(50% - 12px);
+    top:-24px;
+    border-bottom:12px solid white;
+  }
+}
+.fukidashi-ue:before{
+  left:calc(50% - 12px);
+  bottom:-26px;
+  border-top:12px solid #ba105e;
+}
+.fukidashi-ue:after{
+  left:calc(50% - 12px);
+  bottom:-24px;
+  border-top:12px solid white;
+}
+.intro-success,.intro-failure,.intro-retry{
+  display:inline-block;
+  margin:11px;
+  padding:11px;
+  color:black;
+  cursor:pointer;
+  text-decoration:none;
+}
+.intro-success{ background:#ffdef1;}
+.intro-failure{ background:#def1ff; }
+.intro-retry{ background:#ffceff; }
+.intro-success:hover,.intro-failure:hover,.intro-retry:hover{
+  transform:scale(1.1);
+  transition:transform 200ms ease;
+}
+.rebuke{
+  margin:33px;
+}
+.rebuke-img{
+  max-width:310px;
+  max-height:33vh;
+  margin-top:22px;
+}
+
+.sample-wall{
+  display:block;
+  position:relative;
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.sample-tile{
+  display:block;
+  float:right;
+  position:relative;
+  box-sizing:border-box;
+  margin:11px 11px 0 0;
+  background:#eadada;
+  overflow:hidden;
+}
+.sample-header{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  font-family:serif;
+  font-size:large;
+  font-weight:demibold;
+  line-height:2em;
+}
+.member-sample{
+  position:absolute;
+  box-sizing:border-box;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  padding:11px;
+  background-size:cover;
+  opacity:0.5;
+  cursor:zoom-in;
+}
+.member-sample:hover{
+  transform:scale(1.1);
+  transition:transform 200ms ease;
+}
+.member-name{
+  position:absolute;
+  left:0;
+  top:0;
+  padding:11px;
+  color:white;
+  font-family:serif;
+  font-size:xx-large;
+  font-weight:demibold;
+  text-shadow:2px 2px 4px black, 2px -2px 4px black, -2px -2px 4px black, -2px 2px 4px black;
+  cursor:zoom-in;
+}
+.member-twipix{
+  position:absolute;
+  left:0;
+  bottom:0;
+  padding:11px;
+}
+.member-twipix img{
+  display:block;
+  float:left;
+  margin-right:5px;
+}
+@media (max-width:767px){
+  #sample{height:200vh;}
+  .sample-tile,.sample-header{
+    width:calc((100% - 11px) / 2 - 11px);
+    height:calc((100% - 11px) / 6 - 11px);
+  }
+}
+@media (min-width:768px) and (max-width:1199px){
+  #sample{height:150vh;}
+  .sample-tile,.sample-header{
+    width:calc((100% - 11px) / 3 - 11px);
+    height:calc((100% - 11px) / 4 - 11px);
+  }
+}
+@media (min-width:1200px){
+  #sample{height:100vh;}
+  .sample-tile,.sample-header{
+    width:calc((100% - 11px) / 4 - 11px);
+    height:calc((100% - 11px) / 3 - 11px);
+  }
+}
+@media (min-width:640px) and (max-width:959px){
+}
+@media (min-width:960px){
+}
+.info-hyoushi{
+  max-width:70vw;
+  max-height:90vh;
+  margin:33px;
+  margin-top:55px;
+  cursor:zoom-in;
+}
+.info-dl{
+  margin-top:33px;
+  margin-bottom:55px;
+}
+.info-dl dt{
+  margin:22px 0 11px 0;
+  border-bottom:2px solid #ba105e;
+  font-size:large;
+  font-weight:bold;
+}
+.info-dl dd{
+  margin-left:0;
+}
+.staff-dl dt{
+  margin:22px 0 11px 0;
+  border-bottom:1px solid #ba105e;
+  font-size:small;
+}
+.staff-dl dd{
+  margin-left:0;
+}
+#mediascreen{
+  display:none;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:10;
+  width:100vw;
+  height:100vh;
+  color:white;
+  background:rgba(0,0,0,0.5);
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+#mediascreen.show{
+  display:flex;
+  animation:show 500ms ease;
+}
+#mediascreen #close{
+  background:rgba(0,0,0,0.5);
+  color:white;
+  font-size:xx-large;
+  font-weight:bold;
+  position:fixed;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  cursor:pointer;
+  right:12px;
+  top:12px;
+  width:1.2em;
+  height:1.2em;
+  border-radius:50%;
+}
+#mediascreen #close:hover{
+  transform:scale(1.3);
+  transition:transform 200ms ease;
+}
+#mediascreen img{
+  max-width:100vw;
+  max-height:100vh;
+}
+@keyframes show{
+  from{ opacity:0; }
+  to{ opacity:1; }
+}
+@keyframes hide{
+  from{ opacity:1; }
+  to{ opacity:0; }
+}
+</style>
 </head>
 <body>
-心を読む能力は本当に素晴らしい。
+<main>
+  <section class="screen inmind" id="intro">
+    <div class="introparts fukidashi introhidden" data-id="0" data-next="1" data-function="dots">あなたが思い浮かべている数字は</div>
+    <div class="introparts fukidashi introhidden" data-id="1" data-next="">ズバリ！ 「<span class="eleven-wh">11</span>」ですね？<br>
+      <div class="intro-success" onclick="innext('.success')">あたり！</div>
+      <div class="intro-failure" onclick="innext('.failure')">はずれ…</div>
+    </div>
+    <div class="introparts fukidashi introhidden">
+      <p class="success introhidden">どうです？心を読む能力は本当に素晴らしいでしょう？<br><a href="https://twitter.com/intent/tweet?text=想像していた数字を古明地さとりが当てた&url=https%3A%2F%2Frapameri.github.io%2F11%2F">結果をつぶやく</a></p>
+      <p class="failure introhidden">…流石にインターネット越しでは心は読めないわ<br><a href="https://twitter.com/intent/tweet?text=古明地さとりはあなたの心を読めなかった&url=https%3A%2F%2Frapameri.github.io%2F11%2F">結果をつぶやく</a></p>
+      <div class="intro-retry" onclick="introgame()">もう一度遊ぶ</div>
+    </div>
+    <div class="introparts scrollmark introhidden" id="scrollmark">▼</div>
+  </section>
+  <section class="screen" id="lead">
+    <div>
+      <img src="img/logo.png" alt="古明地さとり11周年合同誌" style="width:256px;">
+      <p>東方地霊殿<span class="eleven-wh">11</span>周年のお祝いに<span class="eleven-wh">11</span>人の作家が集結！</p>
+      <p>十人十色もとい<span class="eleven-wh">十一</span>人<span class="eleven-wh">十一</span>色の魅力的な古明地さとりをご覧あれ！</p>
+    </div>
+  </section>
+  <section class="screen" id="sample">
+    <ul class="sample-wall">
+      <li class="sample-tile sample-header" style="background-image:url('sample.png');background-size:100% 100%;">
+        <h2 class="sample-h">Member<br>&amp;<br>Sample</h2>
+      </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/rapameri.png');" onclick="sample(0)"></div>
+      <div class="member-name" onclick="sample(0)">ラパメリ</div>
+      <div class="member-twipix"><a href="https://twitter.com/rapameri" target="_blank" title="twitter.com/rapameri"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=11714075" target="_blank" title="www.pixiv.net/member.php?id=11714075"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/menotama.png');" onclick="sample(1)"></div>
+      <div class="member-name" onclick="sample(1)">めのたま</div>
+      <div class="member-twipix"><a href="https://twitter.com/nnonnonno_2" target="_blank" title="twitter.com/nnonnonno_2"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=18433772" target="_blank" title="www.pixiv.net/member.php?id=18433772"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/tora.png');" onclick="sample(2)"></div>
+      <div class="member-name" onclick="sample(2)">虎</div>
+      <div class="member-twipix"><a href="https://twitter.com/citrus_bw" target="_blank" title="twitter.com/citrus_bw"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=117211" target="_blank" title="www.pixiv.net/member.php?id=117211"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/toden.png');" onclick="sample(3)"></div>
+      <div class="member-name" onclick="sample(3)">斗伝</div>
+      <div class="member-twipix"><a href="https://twitter.com/EYE_SPLICE" target="_blank" title="twitter.com/EYE_SPLICE"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=5143978" target="_blank" title="www.pixiv.net/member.php?id=5143978"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/twumi.png');" onclick="sample(4)"></div>
+      <div class="member-name" onclick="sample(4)">トゥーミ</div>
+      <div class="member-twipix"><a href="https://twitter.com/twumi425" target="_blank" title="twitter.com/twumi425"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=1875134" target="_blank" title="www.pixiv.net/member.php?id=1875134"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/chanomino.png');" onclick="sample(5)"></div>
+      <div class="member-name" onclick="sample(5)">茶野みの</div>
+      <div class="member-twipix"><a href="https://twitter.com/minorin_minor" target="_blank" title="twitter.com/minorin_minor"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=11108076" target="_blank" title="www.pixiv.net/member.php?id=11108076"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/suwayasai.png');" onclick="sample(6)"></div>
+      <div class="member-name" onclick="sample(6)">諏訪ヤサイ</div>
+      <div class="member-twipix"><a href="https://twitter.com/yasai_023" target="_blank" title="twitter.com/yasai_023"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=13477002" target="_blank" title="www.pixiv.net/member.php?id=13477002"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/komeo.png');" onclick="sample(7)"></div>
+      <div class="member-name" onclick="sample(7)">こめお</div>
+      <div class="member-twipix"><a href="https://twitter.com/tukinomisheru" target="_blank" title="twitter.com/tukinomisheru"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=450512" target="_blank" title="www.pixiv.net/member.php?id=450512"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/kari.png');" onclick="sample(8)"></div>
+      <div class="member-name" onclick="sample(8)">雁</div>
+      <div class="member-twipix"><a href="https://twitter.com/kariore" target="_blank" title="twitter.com/kariore"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=87692" target="_blank" title="www.pixiv.net/member.php?id=87692"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/ominaeshi.png');" onclick="sample(9)"></div>
+      <div class="member-name" onclick="sample(9)">おみなえし</div>
+      <div class="member-twipix"><a href="https://twitter.com/ominaeshin" target="_blank" title="twitter.com/ominaeshin"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=446171" target="_blank" title="www.pixiv.net/member.php?id=446171"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    <li class="sample-tile">
+      <div class="member-sample" style="background-image:url('img/akira.png');" onclick="sample(10)"></div>
+      <div class="member-name" onclick="sample(10)">暁【あきら】</div>
+      <div class="member-twipix"><a href="https://twitter.com/salmontiger" target="_blank" title="twitter.com/salmontiger"><img src="twitter.png" alt="twitter"></a><a href="https://www.pixiv.net/member.php?id=281080" target="_blank" title="www.pixiv.net/member.php?id=281080"><img src="pixiv.png" alt="pixiv"></a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="screen" id="info">
+    <img src="img/sample11.png" alt="古明地さとり11周年合同誌" class="info-hyoushi" onclick="sample(11)">
+    <dl class="info-dl">
+      <dt>タイトル</dt>
+      <dd>古明地さとり<span class="eleven">11</span>周年合同誌</dd>
+      <dt>仕様</dt>
+      <dd>B5判モノクロ漫画52ページ</dd>
+      <dt>頒布イベント</dt>
+      <dd>2019年8月12日（月）<br>
+      コミックマーケット96 4日目<br>
+      南4ホール ハ-25b「ラパパメリカ」
+      </dd>
+      <dt>定価</dt>
+      <dd>1111円（消費税8%込み）</dd>
+      <dt>会場特別頒価・会場特典</dt>
+      <dd>1000円・クリアファイル付き</dd>
+      <dt>書店委託</dt>
+      <dd>メロンブックス</dd>
+      <dt>シェア</dt>
+      <dd><a href="https://twitter.com/share" class="twitter-share-button" data-text="古明地さとり11周年合同誌" data-url="https://rapameri.github.io/11/" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></dd>
+    </dl>
+  </section>
+</main>
+<footer class="screen">
+  <div>
+    <dl class="staff-dl">
+      <dt>主催</dt>
+      <dd>ラパメリ</dd>
+      <dt>副主催・サイト制作</dt>
+      <dd>茶野みの</dd>
+    </dl>
+    <div class="introhidden rebuke" id="rebuke">
+      <div class="fukidashi-ue">ゲームの途中でどっか行かないでください！</div>
+      <img class="rebuke-img" src="https://rapameri.github.io/img/acryl/20170811satori.png" alt="古明地さとり">
+    </div>
+    <p><small>&copy;2019 ラパパメリカ</small></p>
+  </div>
+</footer>
+<div id="mediascreen" onclick="closesample()">
+  <div id="mediastage" onclick="">
+    <img id="media-main" alt="sample">
+  </div>
+  <div id="close">×</div>
+</div>
+<script>
+let playcount = Number(localStorage.getItem('satori11pc')) || 0;
+let scrollmarkhidden = true;
+let playing = false;
+let rebuke = false;
+function wait(msec){
+  return new Promise(resolve=>{
+    setTimeout(()=>{resolve()},msec);
+  });
+}
+function hideAshowB(A,B,ms){
+  (()=>{
+    if (A) {
+      A.classList.remove('outspeak');
+      A.classList.add('inmind');
+      return wait(500);
+    } else return new Promise(r=>{r()});
+  })().then(()=>{
+    if (A) {
+      A.classList.add('introhidden');
+    }
+    return wait(ms);
+  }).then(()=>{
+    if (B) {
+      B.classList.remove('introhidden');
+      B.classList.add('inmind');
+      return wait(500);
+    } else return new Promise(r=>{r()});
+  }).then(()=>{
+    if (B) {
+      B.classList.remove('inmind');
+      B.classList.add('outspeak');
+    }
+  });
+};
+function introgame(){
+  playing = true;
+  const intro = document.getElementById('intro');
+  const parts = intro.querySelectorAll('.introparts');
+  parts[2].classList.add('introhidden');
+  parts[3].classList.add('introhidden');
+  const reslp = parts[2].querySelectorAll('p');
+  reslp[0].classList.add('introhidden');
+  reslp[1].classList.add('introhidden');
+  (()=>{
+    return wait(500);
+  })().then(()=>{
+    window.alert('数字を一つ思い浮かべてください');
+    hideAshowB(null,parts[0],0);
+    parts[0].innerHTML = parts[0].innerHTML.replace(/\./g,'');
+    (function(n){
+      n--;
+      parts[0].innerHTML += '.';
+      if (n > 0) setTimeout(arguments.callee,614,n);
+    })(11);
+    return wait(3100);
+  }).then(()=>{
+    hideAshowB(parts[0],parts[1],0);
+    return wait(500);
+  });
+}
+function innext(result){
+  playing = false;
+  const intro = document.getElementById('intro');
+  const parts = intro.querySelectorAll('.introparts');
+  hideAshowB(parts[1],parts[2],0);
+  setTimeout(()=>{
+    parts[3].classList.remove('introhidden');
+    scrollmarkhidden = false;
+  },2000);
+  const reslp = parts[2].querySelector(result);
+  reslp.classList.remove('introhidden');
+  localStorage.setItem('satori11pc',++playcount);
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+  (()=>{
+    return wait(310);
+  })().then(()=>{
+    const intro = document.getElementById('intro');
+    intro.classList.remove('inmind');
+    intro.classList.add('outspeak');
+  });
+  if (!playcount) {
+    introgame();
+  } else {
+    const parts = intro.querySelectorAll('.introparts');
+    parts[2].classList.remove('introhidden');
+    parts[3].classList.remove('introhidden');
+    scrollmarkhidden = false;
+  }
+  window.addEventListener('scroll',function(){
+    const scrollElem = document.scrollingElement || document.documentElement || document.body;
+    if (!scrollmarkhidden && scrollElem.scrollTop > scrollElem.clientHeight / 4) {
+      document.getElementById('scrollmark').classList.add('introhidden');      
+      scrollmarkhidden = true;
+    }
+    if (playing && !rebuke && scrollElem.scrollTop > scrollElem.clientHeight / 4) {
+      document.getElementById('rebuke').classList.remove('introhidden');
+      rebuke = true;
+    } else if (!playing && rebuke) {
+      document.getElementById('rebuke').classList.add('introhidden');
+      rebuke = false;
+    }
+  });
+});
+function sample(x){
+  const screen = document.getElementById('mediascreen');
+  screen.querySelector('img#media-main').setAttribute('src','img/sample'+x+'.png');
+  screen.dataset.x = x;
+  screen.classList.add('show');
+}
+function closesample(){
+  document.getElementById('mediascreen').classList.remove('show');
+}
+function stageshut(){
+  const screen = document.getElementById('mediascreen');
+  (function(){
+    const ny = parseInt(screen.style.top,10) || 0;
+    if (Math.abs(ny) < window.innerHeight) {
+      screen.style.top = (ny + Math.sign(ny) * 100 + 1) + 'px';
+      setTimeout(arguments.callee,16);
+    } else {
+      screen.style.top = '';
+      closesample();
+    }
+  })();
+}
+function medialeaf(sign){
+  const screen = document.getElementById('mediascreen');
+  (function(){
+    const nx = parseInt(screen.style.left,10) || 0;
+    if (Math.abs(nx) < window.innerWidth) {
+      screen.style.left = nx + sign * (window.innerWidth / 10) + 'px';
+      setTimeout(arguments.callee,16);
+    } else {
+      screen.style.left = '';
+      closesample();
+      let x = Number(screen.dataset.x) + sign;
+      x = (x >= 12) ? (x - 12) : (x < 0) ? (x + 12) : x;
+      setTimeout(sample,16,x);
+    }
+  })();
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.addEventListener('keyup', function(e){
+    const mediascreen = document.getElementById('mediascreen');
+    const kc = e.keyCode;
+    const showing = mediascreen.classList.contains('show');
+    if (showing) {
+      if (kc==37 || kc==39) {
+        medialeaf(38 - kc);
+      }
+    }
+  });
+  let touchStartX,touchStartY,touchMoveX,touchMoveY;
+  window.addEventListener('touchstart',function(e){
+    touchStartX = e.touches[0].pageX;
+    touchStartY = e.touches[0].pageY;
+    touchMoveX = touchStartX;
+    touchMoveY = touchStartY;
+  });
+  window.addEventListener('touchmove',function(e){
+    const mediascreen = document.getElementById('mediascreen');
+    touchMoveX = e.changedTouches[0].pageX;
+    touchMoveY = e.changedTouches[0].pageY;
+    if (mediascreen.classList.contains('show')) {
+      const screen = document.getElementById('mediascreen');
+      if (Math.abs(touchMoveX-touchStartX)>51 && Math.abs(touchMoveY-touchStartY)<51) {
+        const a = window.innerWidth / 2;
+        screen.style.left = a * Math.atan((touchMoveX - touchStartX) / a) + 'px';
+      } else if (Math.abs(touchMoveY-touchStartY)>51 && Math.abs(touchMoveX-touchStartX)<51) {
+        const b = window.innerHeight / 2;
+        screen.style.top = b * Math.atan((touchMoveY - touchStartY) / b) + 'px';
+      } else {
+        screen.style.left = '';
+        screen.style.top = '';
+      }
+      e.preventDefault();
+      return false;
+    }
+  },{passive:false});
+  window.addEventListener('touchend',function(e){
+    const mediascreen = document.getElementById('mediascreen');
+    if (mediascreen.classList.contains('show')) {
+      const screen = document.getElementById('mediascreen');
+      const divX = touchMoveX - touchStartX;
+      const divY = touchMoveY - touchStartY;
+      if (Math.abs(divX) > Math.min(window.innerWidth/3,110) && Math.abs(touchMoveY-touchStartY)<110) {
+        medialeaf(divX > 0 ? 1 : -1);
+      } else if (Math.abs(divY) > Math.min(window.innerHeight/3,110) && Math.abs(touchMoveX-touchStartX)<110) {
+        stageshut();
+      } else {
+        screen.style.left = '';
+        screen.style.top = '';
+      }
+    }
+  },{passive:false});
+  document.addEventListener('keydown',function(e){
+    const kc = e.keyCode;
+    const mediascreen = document.getElementById('mediascreen');
+    if (mediascreen.classList.contains('show') && (kc==38 || kc==40)) e.preventDefault();
+  });
+  document.addEventListener('mousewheel',function(e){
+    const mediascreen = document.getElementById('mediascreen');
+    if (mediascreen.classList.contains('show')) e.preventDefault();
+  },{passive:false});
+});
+</script>
 </body>
 </html>
